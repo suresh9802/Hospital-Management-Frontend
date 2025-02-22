@@ -1,0 +1,17 @@
+
+
+<div class="row justify-content-center ">
+    <form #registerForm="ngForm" (ngSubmit)="adminLogin()"> 
+        <h1 class="text-center">Admin Login</h1>
+        <label>Enter UserName </label><br>
+        <input class="form-control" type="text" name="username" [(ngModel)]="admin.username" /><br>
+        <label>Enter Password</label><br>
+        <input class="form-control" type="password" name="password" [(ngModel)]="admin.password"  /><br>
+        <div class="text-center"></div> <br>
+        <input type="submit" value="Admin Login" />
+    </form>
+    
+    
+
+
+</div>
