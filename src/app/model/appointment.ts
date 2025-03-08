@@ -1,7 +1,7 @@
 import { Patient } from "./patient";
 
 export class Appointment {
-        id:number=0;
+        id?:number
         firstname:string=""
         lastname:string=""
         age:number=0

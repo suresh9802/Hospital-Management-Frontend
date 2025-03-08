@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Medicine } from '../../model/medicine';
 import { MedicineService } from '../../service/medicine.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-medicine',
@@ -12,7 +13,7 @@ export class MedicineComponent implements OnInit {
 
   medicines: Medicine[]=[];
 
-  constructor(private medicineService:MedicineService){}
+  constructor(private medicineService:MedicineService, private router:Router){}
 
   ngOnInit(): void {
     this.getMedicineList();
@@ -24,4 +25,18 @@ export class MedicineComponent implements OnInit {
     });
   }
 
+  delete(medicineId:any) {
+    this.medicineService.deleteMedicineById(medicineId).subscribe(data =>{
+      console.log(data);
+      this.getMedicineList();
+    })
+  }
+
+  update(medicineId:any) {
+    this.router.navigate(['updatemedicineurl',medicineId]);
+  }
+  
+
 }
+
+

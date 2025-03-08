@@ -1,5 +1,7 @@
 export class Doctor{
-    id:number=0
+    id?:number
     firstname:string=""
     lastname:string=""
+    username:string=""
+    password:string=""
 }

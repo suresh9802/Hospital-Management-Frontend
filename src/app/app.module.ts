@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +13,19 @@ import { HttpClientModule } from '@angular/common/http';
 import { DoctorComponent } from './components/doctor/doctor.component';
 import { MedicineComponent } from './components/medicine/medicine.component';
 import { AppointmentsComponent } from './components/appointments/appointments.component';
+import { AddAppointmentsComponent } from './components/add-appointments/add-appointments.component';
+import { AddDoctorComponent } from './components/add-doctor/add-doctor.component';
+import { AddPatientComponent } from './components/add-patient/add-patient.component';
+import { UpdatePatientComponent } from './components/update-patient/update-patient.component';
+import { PatientLoginComponent } from './components/patient-login/patient-login.component';
+import { PatientHomeComponent } from './components/patient-home/patient-home.component';
+import { UpdateDoctorComponent } from './components/update-doctor/update-doctor.component';
+import { DoctorLoginComponent } from './components/doctor-login/doctor-login.component';
+import { DoctorHomeComponent } from './components/doctor-home/doctor-home.component';
+import { AddMedicineComponent } from './components/add-medicine/add-medicine.component';
+import { UpdateMedicineComponent } from './components/update-medicine/update-medicine.component';
+
+
 
 @NgModule({
   declarations: [
@@ -22,14 +36,27 @@ import { AppointmentsComponent } from './components/appointments/appointments.co
     PatientComponent,
     DoctorComponent,
     MedicineComponent,
-    AppointmentsComponent
+    AppointmentsComponent,
+    AddAppointmentsComponent,
+    AddDoctorComponent,
+    AddPatientComponent,
+    UpdatePatientComponent,
+    PatientLoginComponent,
+    PatientHomeComponent,
+    UpdateDoctorComponent,
+    DoctorLoginComponent,
+    DoctorHomeComponent,
+    AddMedicineComponent,
+    UpdateMedicineComponent
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

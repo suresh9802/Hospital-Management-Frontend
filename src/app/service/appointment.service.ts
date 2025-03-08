@@ -15,4 +15,12 @@ export class AppointmentService {
   getAppointmentList():Observable<Appointment[]>{
     return this.httpClient.get<Appointment[]>(`${this.baseurl}`)
   }
+
+  addAppointments(appointments:Omit<Appointment, 'id'>):Observable<Appointment> {
+    return this.httpClient.post<Appointment>(`${this.baseurl}`,appointments);
+  }
+
+  deleteAppointmentById(id:number):Observable<object> {
+    return this.httpClient.delete(`${this.baseurl}/${id}`);
+  }
 }

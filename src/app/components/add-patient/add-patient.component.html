@@ -1,0 +1,48 @@
+<div class="container mt-4">
+    <h2 class="text-center mb-4">Add New Patient</h2>
+
+    <form (ngSubmit)="onSubmit()">
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped shadow-sm">
+                <tbody>
+                    <tr>
+                        <td><label class="fw-bold">First Name</label></td>
+                        <td><input type="text" id="firstName" class="form-control" name="firstName" placeholder="Enter firstname" [(ngModel)]="patient.firstName" /></td>
+                    </tr>
+                    <tr>
+                        <td><label class="fw-bold">Last Name</label></td>
+                        <td><input type="text" id="lastName" class="form-control" name="lastName" placeholder="Enter lastname" [(ngModel)]="patient.lastName" /></td>
+                    </tr>
+                    <tr>
+                        <td><label class="fw-bold">Age</label></td>
+                        <td><input type="text" id="age" class="form-control" name="age" placeholder="Enter age" [(ngModel)]="patient.age" /></td>
+                    </tr>
+                    <tr>
+                        <td><label class="fw-bold">Blood Group</label></td>
+                        <td><input type="text" id="bloodGroup" class="form-control" name="bloodGroup" placeholder="Enter blood group" [(ngModel)]="patient.bloodGroup" /></td>
+                    </tr>
+                    <tr>
+                        <td><label class="fw-bold">Prescription</label></td>
+                        <td><input type="text" id="prescription" class="form-control" name="prescription" placeholder="Enter prescription" [(ngModel)]="patient.prescription" /></td>
+                    </tr>
+                    <tr>
+                        <td><label class="fw-bold">Dose</label></td>
+                        <td><input type="text" id="dose" class="form-control" name="dose" placeholder="Enter dose" [(ngModel)]="patient.dose" /></td>
+                    </tr>
+                    <tr>
+                        <td><label class="fw-bold">Urgency</label></td>
+                        <td><input type="text" id="urgency" class="form-control" name="urgency" placeholder="Enter urgency" [(ngModel)]="patient.urgency" /></td>
+                    </tr>
+                    <tr>
+                        <td><label class="fw-bold">Fees</label></td>
+                        <td><input type="text" id="fees" class="form-control" name="fees" placeholder="Enter fees" [(ngModel)]="patient.fees" /></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="text-center">
+            <button type="submit" class="btn btn-success w-50">Submit</button>
+        </div>
+    </form>
+</div>

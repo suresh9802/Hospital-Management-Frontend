@@ -1,5 +1,5 @@
 export class Medicine {
-    id:number=0;
+    id?:number;
     drugName:string=""
     stock:string=""
 }
