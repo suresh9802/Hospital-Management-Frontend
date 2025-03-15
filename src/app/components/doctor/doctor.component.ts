@@ -32,8 +32,6 @@ export class DoctorComponent implements OnInit {
     })
   }
 
-  update(id:any) {
-    this.router.navigate(['updatedoctorurl',id]);
-  }
+ 
 
 }

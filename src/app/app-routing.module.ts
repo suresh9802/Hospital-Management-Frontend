@@ -18,6 +18,9 @@ import { DoctorLoginComponent } from './components/doctor-login/doctor-login.com
 import { DoctorHomeComponent } from './components/doctor-home/doctor-home.component';
 import { AddMedicineComponent } from './components/add-medicine/add-medicine.component';
 import { UpdateMedicineComponent } from './components/update-medicine/update-medicine.component';
+import { UpdateAppointmentComponent } from './components/update-appointment/update-appointment.component';
+import { ForgotpassComponent } from './components/patient-login/forgotpass/forgotpass.component';
+import { CreatedocaccComponent } from './components/patient-login/createdocacc/createdocacc.component';
 
 const routes: Routes = [{path:'',component:WelcomeComponent},
   {path:'adminregurl',component:AdminComponent},
@@ -35,8 +38,11 @@ const routes: Routes = [{path:'',component:WelcomeComponent},
 {path:'updatepatienturl/:id',component:UpdatePatientComponent},
 {path:'updatedoctorurl/:Id',component:UpdateDoctorComponent},
 {path:'updatemedicineurl/:Id',component:UpdateMedicineComponent},
+{path:'updateappointmenturl/:id',component:UpdateAppointmentComponent},
 {path:'doctorloginurl',component:DoctorLoginComponent},
-{path:'doctorhomeurl',component:DoctorHomeComponent}
+{path:'doctorhomeurl',component:DoctorHomeComponent},
+{path:'forgotpassurl',component:ForgotpassComponent},
+{path:'createaccurl',component:CreatedocaccComponent}
 
 ];
 

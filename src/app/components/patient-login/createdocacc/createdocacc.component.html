@@ -1,0 +1,42 @@
+<div class="container">
+    <h2>Register New Patient</h2>
+  
+    <form [formGroup]="patientForm" (ngSubmit)="registerPatient()">
+      
+      <div>
+        <label>First Name:</label>
+        <input type="text" formControlName="firstName" required />
+      </div>
+      <div>
+      <label>Last Name:</label>
+        <input type="text" formControlName="lastName" required />
+      </div>
+  
+      <div>
+        <label>Age:</label>
+        <input type="number" formControlName="age" required />
+      </div>
+  
+      <div>
+        <label>Gender:</label>
+        <select formControlName="gender" required>
+          <option value="">Select Gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+  
+      <div>
+        <label>Phone:</label>
+        <input type="text" formControlName="phone" required />
+      </div>
+  
+      
+  
+      <button type="submit" [disabled]="patientForm.invalid">Register</button>
+    </form>
+  
+    <p *ngIf="successMessage" style="color: green;">{{ successMessage }}</p>
+    <p *ngIf="errorMessage" style="color: red;">{{ errorMessage }}</p>
+</div>

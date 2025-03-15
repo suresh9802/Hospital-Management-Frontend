@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AppointmentService } from '../../service/appointment.service';
 import { Appointment } from '../../model/appointment';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-appointments',
@@ -12,7 +13,7 @@ export class AppointmentsComponent implements OnInit {
 
   appointments: Appointment[]=[];
 
-  constructor(private appointmentService:AppointmentService) {}
+  constructor(private appointmentService:AppointmentService, private router:Router) {}
 
   ngOnInit(): void {
     this.getAppointmentList();
@@ -29,6 +30,10 @@ export class AppointmentsComponent implements OnInit {
       console.log(data);
       this.getAppointmentList();
     })
+  }
+
+  update(id:any) {
+    this.router.navigate(['updateappointmenturl',id]);
   }
 
 }

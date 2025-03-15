@@ -2,46 +2,19 @@
 <nav style="margin:auto" class="navbar navbar-expand-lg bg-dark">
     <a style="color: white;" class="navbar-brand" href="#">EDUBRIDGE HOSPITAL</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Togglenavigation">
     <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <!-- You can add more navbar links here if needed -->
+
     </ul>
-    </div>
+</div>
 </nav>
 
 <div class="container">
-    <h2 class="text-center">Add new Appointment</h2>
 
-    <!-- Dropdown Section -->
-    <div class="dropdown">
-        <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-          {{ selectedPatient }}
-        </button>
-        <ul class="dropdown-menu">
-          <li *ngFor="let patient of patient">
-            <a class="dropdown-item" (click)="selectPatient(patient)">{{ patient.id }}</a>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Patient Details Section -->
-<div *ngIf="selectedPatient" class="card p-3">
-    <h5>Patient Details:</h5>
-    <p><strong>Name:</strong> {{ selectedPatient1.firstName }}</p>
-    <p><strong>Age:</strong> {{ selectedPatient1.age }}</p>
-    <p><strong>Urgency:</strong> {{ selectedPatient1.urgency }}</p>
-    
-  </div>
-  
-<div class=" align-items-center ">
-    <button class="btn btn-primary">Confirm Appointment</button>
-  </div>
-
-    <!-- Form Section (uncomment if you wish to use the form) -->
-    <!--
+    <h2 class="text-center">update Appointment</h2>
     <form (ngSubmit)="onSubmit()">
 
     <div class="form-group">
@@ -60,7 +33,7 @@
     </div>
 
     <div class="form-group">
-        <label>Symptoms</label>
+        <label>disease_symptom</label>
         <input type="text" id="symptoms" class="form-control" name="symptoms" placeholder="Enter symptoms" [(ngModel)]="appointments.symptoms"/>
     </div>
 
@@ -70,18 +43,21 @@
     </div>
 
     <div class="form-group">
-        <label>Doctor Appointment</label>
+        <label>DoctorAppointment</label>
         <input type="text" id="doctor_id" class="form-control" name="doctor_id" placeholder="Enter doctor_id" [(ngModel)]="appointments.doctor_id"/>
     </div>
 
     <div class="form-group">
-        <label>Patient ID</label>
+        <label>PatientId</label>
         <input type="text" id="patient_id" class="form-control" name="patient_id" placeholder="Enter patient_id" [(ngModel)]="appointments.patient_id"/>
     </div>
 
-    <button type="submit" class="btn btn-success">Submit</button>
+    
+
+    
+
+    <button type="submit" class="btn btn-success">submit</button>
     
     </form>
-    -->
-
+    
 </div>

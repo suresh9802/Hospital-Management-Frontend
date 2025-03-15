@@ -24,6 +24,14 @@ export class PatientLoginComponent {
     }
   }
 
+  forgotpass() {
+    this.router.navigate(['forgotpassurl']);
+  }
+
+  createacc() {
+    this.router.navigate(['createaccurl']);
+  }
+
 }
 
 

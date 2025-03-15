@@ -24,6 +24,9 @@ import { DoctorLoginComponent } from './components/doctor-login/doctor-login.com
 import { DoctorHomeComponent } from './components/doctor-home/doctor-home.component';
 import { AddMedicineComponent } from './components/add-medicine/add-medicine.component';
 import { UpdateMedicineComponent } from './components/update-medicine/update-medicine.component';
+import { UpdateAppointmentComponent } from './components/update-appointment/update-appointment.component';
+import { ForgotpassComponent } from './components/patient-login/forgotpass/forgotpass.component';
+import { CreatedocaccComponent } from './components/patient-login/createdocacc/createdocacc.component';
 
 
 
@@ -47,7 +50,10 @@ import { UpdateMedicineComponent } from './components/update-medicine/update-med
     DoctorLoginComponent,
     DoctorHomeComponent,
     AddMedicineComponent,
-    UpdateMedicineComponent
+    UpdateMedicineComponent,
+    UpdateAppointmentComponent,
+    ForgotpassComponent,
+    CreatedocaccComponent
     
   ],
   imports: [

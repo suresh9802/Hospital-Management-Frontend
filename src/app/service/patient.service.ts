@@ -33,5 +33,8 @@ getPatientById(patientId:any)
 {
   return this.httpClient.get(`${this.baseUrl}/${patientId}`);
 }
+// getPatientById(): Observable<any[]> {
+//   return this.httpClient.get<any[]>(this.baseUrl);
+// }
 
 }

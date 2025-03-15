@@ -1,3 +1,18 @@
+
+<br>
+<nav style="margin:auto" class="navbar navbar-expand-lg bg-dark">
+    <a style="color: white;" class="navbar-brand" href="#">EDUBRIDGE HOSPITAL</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Togglenavigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+    </ul>
+</div>
+</nav>
+
 <div class="container mt-4">
     <h2 class="text-center mb-4">Add New Patient</h2>
 
@@ -16,6 +31,10 @@
                     <tr>
                         <td><label class="fw-bold">Age</label></td>
                         <td><input type="text" id="age" class="form-control" name="age" placeholder="Enter age" [(ngModel)]="patient.age" /></td>
+                    </tr>
+                    <tr>
+                        <td><label class="fw-bold">Gender</label></td>
+                        <td><input type="text" id="gender" class="form-control" name="gender" placeholder="Enter gender" [(ngModel)]="patient.gender" /></td>
                     </tr>
                     <tr>
                         <td><label class="fw-bold">Blood Group</label></td>
@@ -37,6 +56,7 @@
                         <td><label class="fw-bold">Fees</label></td>
                         <td><input type="text" id="fees" class="form-control" name="fees" placeholder="Enter fees" [(ngModel)]="patient.fees" /></td>
                     </tr>
+                    
                 </tbody>
             </table>
         </div>

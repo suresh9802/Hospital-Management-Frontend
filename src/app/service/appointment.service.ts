@@ -16,11 +16,19 @@ export class AppointmentService {
     return this.httpClient.get<Appointment[]>(`${this.baseurl}`)
   }
 
-  addAppointments(appointments:Omit<Appointment, 'id'>):Observable<Appointment> {
-    return this.httpClient.post<Appointment>(`${this.baseurl}`,appointments);
+  addAppointments(appointments:Omit<Appointment, 'id'>,patientId:number,doctorId:number):Observable<Appointment> {
+    return this.httpClient.post<Appointment>(`${this.baseurl}/${patientId}/${doctorId}`,appointments);
   }
 
   deleteAppointmentById(id:number):Observable<object> {
     return this.httpClient.delete(`${this.baseurl}/${id}`);
+  }
+
+  getAppointmentById(appointmentId:any) {
+    return this.httpClient.get(`${this.baseurl}/${appointmentId}`);
+  }
+
+  updateAppointment(id:number, appointmentData:any):Observable<any> {
+    return this.httpClient.put(`${this.baseurl}/${id}`,appointmentData);
   }
 }

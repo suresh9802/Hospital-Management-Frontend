@@ -9,6 +9,7 @@ export class Patient {
         dose:string=""
         urgency:string=""
         fees:string=""
+        gender:string=""
         username:string=""
         password:string=""
     

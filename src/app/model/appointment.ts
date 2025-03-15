@@ -7,6 +7,8 @@ export class Appointment {
         age:number=0
         symptoms:string=""
         number:string=""
+        patient_id:number=0
+        doctor_id:number=0
         
         
 }
